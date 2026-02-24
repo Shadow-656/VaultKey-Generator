@@ -1,0 +1,16 @@
+{
+  "name": "VaultKey - Secure Generator",
+  "short_name": "VaultKey",
+  "description": "A secure, client-side PIN & Password Generator wrapped in a modern liquid-glass UI.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f8f7ff",
+  "theme_color": "#9381ff",
+  "icons": [
+    {
+      "src": "assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 <div align="center">
-  <img src="assets/readme-banner.png" alt="VaultKey Banner" width="100%">
+  <img src="assets/cover.png" alt="VaultKey Banner" width="100%">
   
   <h1>🔐 VaultKey</h1>
   <p><strong>A secure, client-side PIN & Password Generator wrapped in a modern liquid-glass UI.</strong></p>
 
-  <a href="https://YOUR_GITHUB_USERNAME.github.io/VaultKey/"><strong>Explore the Live App »</strong></a>
+  <a href="https://shadow-656.github.io/VaultKey-Generator/"><strong>Explore the Live App »</strong></a>
   
   <br>
   <br>
@@ -25,11 +25,11 @@ The user interface was crafted with a focus on premium aesthetics, utilizing a "
 
 ### ✨ Key Features
 
-* **Pronounceable Passwords:** An intelligent "Easy to Say" algorithm generates alternating consonant/vowel combinations for memorable, yet secure, keys.
-* **Mutually Exclusive Logic:** Seamless, smart UI toggles prevent conflicting parameter selections during password generation.
-* **One-Tap Clipboard Integration:** Tap the output container to instantly copy the generated key with visual toast feedback.
-* **Progressive Web App:** Installable on any mobile or desktop device for complete offline functionality.
-* **Native Theming:** A seamless dark/light mode toggle built with CSS variables for instant, flash-free theme switching.
+* **Pronounceable Passwords:** Generates easy-to-remember passwords using consonant–vowel patterns.
+* **Mutually Exclusive Logic:** Prevents conflicting options automatically.
+* **One-Tap Clipboard Integration:** Tap to copy passwords instantly with toast feedback.
+* **Progressive Web App:** Installable and works fully offline.
+* **Native Theming:** Smooth light/dark mode with instant switching.
 
 ---
 
@@ -41,10 +41,10 @@ The user interface was crafted with a focus on premium aesthetics, utilizing a "
 
 ---
 
-## 🚀 Local Setup
+## License
 
-To run this project locally, simply clone the repository. No build tools or package managers are required.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-1. Clone the repository:
-   ```sh
-   git clone [https://github.com/YOUR_GITHUB_USERNAME/VaultKey.git](https://github.com/YOUR_GITHUB_USERNAME/VaultKey.git)
+## Author
+
+- **Shadow-656** - [GitHub Profile](https://github.com/Shadow-656)
