@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>VaultKey - Secure PIN & Password Generator</title>
+    <meta name="title" content="VaultKey - Secure PIN & Password Generator">
+    <meta name="description" content="A beautiful, glassmorphism-inspired secure PIN and password generator. Create strong, easy-to-say, or complex keys instantly in your browser.">
+    <meta name="keywords" content="password generator, pin generator, secure keys, glassmorphism UI, web tool">
+    <meta name="author" content="Shadow-656">
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://Shadow-656.github.io/VaultKey-Generator/">
+    <meta property="og:title" content="VaultKey - Secure PIN & Password Generator">
+    <meta property="og:description" content="A beautiful, glassmorphism-inspired secure PIN and password generator. Create strong, easy-to-say, or complex keys instantly.">
+    <meta property="og:image" content="https://Shadow-656.github.io/VaultKey-Generator/assets/og-image.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://Shadow-656.github.io/VaultKey-Generator/">
+    <meta property="twitter:title" content="VaultKey - Secure PIN & Password Generator">
+    <meta property="twitter:description" content="A beautiful, glassmorphism-inspired secure PIN and password generator. Create strong, easy-to-say, or complex keys instantly.">
+    <meta property="twitter:image" content="https://Shadow-656.github.io/VaultKey-Generator/assets/og-image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <div class="main-container">
+    <div class="ambient-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="glass-panel">
+        <header>
+            <div class="logo">🔐</div>
+            <h1>VaultKey</h1>
+            <p class="subtitle">Secure Generator</p>
+        </header>
+
+        <div class="segmented-control">
+            <input type="radio" id="tab-pin" name="mode-tab" value="PIN" checked>
+            <input type="radio" id="tab-pass" name="mode-tab" value="PASSWORD">
+            
+            <label for="tab-pin">PIN</label>
+            <label for="tab-pass">Password</label>
+            <div class="glider"></div>
+        </div>
+
+        <div class="options-wrapper">
+            <div id="pin-options" class="options-section active">
+                <p class="section-label">PIN Length</p>
+                <div class="pin-segmented-control">
+                    <input type="radio" id="pin-4" name="pin-length" value="4" checked>
+                    <input type="radio" id="pin-5" name="pin-length" value="5">
+                    <input type="radio" id="pin-6" name="pin-length" value="6">
+                    
+                    <label for="pin-4">4</label>
+                    <label for="pin-5">5</label>
+                    <label for="pin-6">6</label>
+                    <div class="pin-glider"></div>
+                </div>
+            </div>
+
+            <div id="password-options" class="options-section">
+                <div class="slider-group">
+                    <label for="pass-length" class="slider-label">
+                        Length <span id="length-val" class="badge">12</span>
+                    </label>
+                    <input type="range" id="pass-length" class="apple-slider" min="8" max="16" value="12">
+                </div>
+                
+                <div class="toggles-group">
+                    <label class="apple-toggle" id="label-easy">
+                        <span class="toggle-label">Easy to say (Pronounceable)</span>
+                        <input type="checkbox" id="easy-to-say">
+                        <div class="toggle-switch"></div>
+                    </label>
+                    <hr class="divider">
+                    <label class="apple-toggle" id="label-numbers">
+                        <span class="toggle-label">Numbers (0-9)</span>
+                        <input type="checkbox" id="inc-numbers" checked>
+                        <div class="toggle-switch"></div>
+                    </label>
+                    <hr class="divider">
+                    <label class="apple-toggle" id="label-symbols">
+                        <span class="toggle-label">Symbols (!@#)</span>
+                        <input type="checkbox" id="inc-symbols" checked>
+                        <div class="toggle-switch"></div>
+                    </label>
+                </div>
+            </div>
+
+        <button id="generate-btn" class="primary-btn">Generate</button>
+
+        <div class="output-container" id="output-container" title="Click to copy">
+            <input type="text" id="result" readonly placeholder="Tap generate...">
+            <button id="copy-btn" class="icon-btn" aria-label="Copy to clipboard">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            </button>
+        </div>
+        <div id="toast" class="toast">Copied to clipboard!</div>
+    </main>
+
+    <button id="theme-toggle" class="theme-btn" title="Toggle Dark/Light Mode">
+        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+    </button>
+    <footer>
+        <p>Developed as an Open Source Tool by <a href="https://github.com/Shadow-656" target="_blank">Shadow-656</a> &copy; 2026</p>
+    </footer>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
